@@ -1,0 +1,31 @@
+Explicación del Código:
+Clase Nodo:
+
+Define la estructura base de un nodo con un estadoComun y una lista de enlaces.
+Incluye métodos para añadir enlaces y aceptar un visitante.
+Tiene un método abstracto funcInfoGeo que debe ser implementado por las subclases.
+Subclases de Nodo (Ciudad, Industria, LugarTurismo):
+
+Extienden la clase Nodo y añaden un estadoEspecifico.
+Implementan el método funcInfoGeo con lógica específica para cada tipo de nodo.
+Clase Enlace:
+
+Representa una conexión entre dos nodos (origen y destino).
+Clase Grafo:
+
+Mantiene una lista de nodos y permite añadir nodos.
+Tiene un método exportar que acepta un visitante para procesar todos los nodos.
+Clase Visitor (Visitante):
+
+Define un método visitNode que debe ser implementado por subclases específicas de visitantes.
+Clase XMLExportVisitor:
+
+Extiende la clase Visitor y proporciona lógica para exportar nodos a formato XML.
+Implementa el método visitNode para manejar diferentes tipos de nodos (Ciudad, Industria, LugarTurismo).
+Ejemplo de uso:
+
+Se crea una instancia de Grafo.
+Se crean nodos de tipo Ciudad, Industria y LugarTurismo.
+Se crean enlaces entre los nodos y se añaden al nodo Ciudad.
+Los nodos se añaden al grafo.
+Se crea un visitante XMLExportVisitor y se usa para exportar el grafo a XML.
